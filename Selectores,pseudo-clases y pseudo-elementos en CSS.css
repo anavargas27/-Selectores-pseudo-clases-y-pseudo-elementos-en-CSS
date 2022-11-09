@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:rgb(12, 11, 11) ;
+
+}
+.boton{
+    padding: 5rem 15rem;
+   background: blue;
+    border: 0.3rem solid rgb(94, 94, 201);
+    cursor: pointer;
+    position: relative;
+    border-radius: .5rem;
+}
+.boton::before{
+    content: 'Pasa por Encima';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    font-size: 30px;
+    color: rgb(20, 7, 7);
+    
+   
+
+   
+}
+.boton::after{
+    content: '!Hecho¡';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 30px;
+    color: azure;border-radius: .5rem;
+    background: green;
+    border: 0.3rem solid rgb(94, 94, 201);
+    opacity: 0;
+}
+.boton:hover::before{
+    transform: translate(-50%, -50%)scale(3);
+    opacity: 0;
+    background: blue;
+    border: 0.3rem solid rgb(94, 94, 201);
+   
+
+}
+.boton:hover::after{
+    transform: translate(-50%, -50%)scale(0.8);
+    opacity: 1; 
+    background: green;
+    padding: 5rem 15rem;
+    border: 0.3rem solid rgb(94, 94, 201);
+    border-radius: .5rem;
+    
+}
